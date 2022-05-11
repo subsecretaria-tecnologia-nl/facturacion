@@ -5,8 +5,9 @@ const Title: FunctionComponent<ITitleProps> = ({
     children,
     color,
     type = "h2",
-    className,
+    className = "",
 }) => {
+    const hola = ""
     const Container = ({ children }) => {
         switch (type) {
             case "h1":

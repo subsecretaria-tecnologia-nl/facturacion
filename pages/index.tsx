@@ -1,6 +1,6 @@
 import Head from "next/head"
 import Image from "next/image"
-import Title from "atoms/Typography"
+import { Title, Body } from "atoms/Typography"
 
 export default function Home() {
     return (
@@ -16,8 +16,15 @@ export default function Home() {
 
             <main className={"main"}>
                 <Title type="h1" className="title">
-                    Welcome to <a href="https://nextjs.org">Next.js!</a>
+                    algo
                 </Title>
+                <Body otro={45} algo={"086086"}>
+                    ESTE ES EL HIJO
+                </Body>
+
+                <h1 className="title">
+                    Welcome to <a href="https://nextjs.org">Next.js!</a>
+                </h1>
 
                 <p className={"description"}>
                     Get started by editing{" "}

@@ -23,7 +23,8 @@ describe("Atom Title Component", () => {
         const h4 = component.container.querySelectorAll("h4")
         const h5 = component.container.querySelectorAll("h5")
         const h6 = component.container.querySelectorAll("h6")
-        expect(h1.length).toEqual(2)
+
+        expect(h1.length).toEqual(1)
         expect(h2.length).toEqual(2)
         expect(h3.length).toEqual(1)
         expect(h4.length).toEqual(1)

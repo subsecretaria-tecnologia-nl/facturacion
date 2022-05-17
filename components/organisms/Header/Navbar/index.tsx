@@ -11,7 +11,12 @@ const Header: FunctionComponent<IHeaderProps> = ({ color, className = "" }) => {
                 style={{ color }}
             >
                 <div className="logo-container">
-                    <img src="/img/logo.svg" alt="" className="logo-header" />
+                    <img
+                        src="/img/logo.svg"
+                        alt=""
+                        id="logo-nl"
+                        className="logo-header"
+                    />
                 </div>
             </div>
         </>

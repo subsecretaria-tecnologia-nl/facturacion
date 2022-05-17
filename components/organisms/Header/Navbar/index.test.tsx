@@ -1,28 +1,14 @@
 import "@testing-library/jest-dom"
-import { render } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
+import { debug } from "console"
 
 import Header from "."
 
-describe("Componente header", () => {
-    it("prueba de que reendere", () => {
-        const component = render(
-            <>
-                <Header />
-            </>
-        )
-
-        expect(component.container.firstChild).toMatchInlineSnapshot(`<div
-            class="header-app "
-        >
-            <div
-        class="logo-container"
-            >
-    <img
-      alt=""
-            class="logo-header"
-      src="/img/logo.svg"
-                />
-            </div>
-        </div>`)
+describe("test header", () => {
+    it("test que la imagen se reendere", () => {
+        const container = render(<Header />)
+        debug(container)
+        const img = container.container.querySelector("#logo-nl")
+        expect(img).toBeInTheDocument()
     })
 })

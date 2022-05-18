@@ -1,8 +1,7 @@
 import Head from "next/head"
 import Image from "next/image"
-// import Title from 'atoms/Typography'
-// import Header  from "atoms/"
 import Header from "organisms/Header"
+import Card from "molecules/Card"
 
 export default function Home() {
     return (
@@ -23,6 +22,10 @@ export default function Home() {
                     Get started by editing{" "}
                     <code className={"code"}>pages/index.js</code>
                 </p>
+
+                <div className="d-flex">
+                    <Card></Card>
+                </div>
             </main>
 
             <footer className={"footer"}>

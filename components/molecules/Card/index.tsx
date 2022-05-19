@@ -5,9 +5,13 @@ const Card: FunctionComponent<ICardProps> = ({
     children,
     width = "500px",
     height = "500px",
+    className = "",
 }) => {
     return (
-        <div className="card" style={{ width, height }}>
+        <div
+            className={["card", className].join(" ")}
+            style={{ width, height }}
+        >
             {children}
         </div>
     )

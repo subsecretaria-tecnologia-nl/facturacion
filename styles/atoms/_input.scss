@@ -3,4 +3,15 @@
     border-radius: 3px;
     border: 1px solid $primary;
     min-width: 100%;
+    padding: 10px 16px;
+    margin-top: 5px;
+
+    &:focus-visible {
+        outline: 2px inherit !important;
+    }
+
+    &:focus {
+        outline: inherit !important;
+        border: 2px solid $primary;
+    }
 }

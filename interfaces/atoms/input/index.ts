@@ -33,7 +33,8 @@ export interface IInputProps {
 	title?: string
 	type?: HTMLInputTypeAttribute | undefined
 	value?: string | ReadonlyArray<string> | number | undefined
-	onChange?: ChangeEventHandler<any> | undefined
+	// defaultValue? : string | undefined | ReadonlyArray<string> | number
+	onChange?: ChangeEventHandler<any> | undefined | null
 	onSelect?: ReactEventHandler<any> | undefined
 	onBlur?: FocusEventHandler<any> | undefined
 	onClick?: MouseEventHandler<any> | undefined

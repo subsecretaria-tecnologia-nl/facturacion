@@ -24,9 +24,7 @@ const Input: FunctionComponent<IInputProps> = ({
     step,
     type,
     value = "",
-    onChange = (evt) => {
-        console.log(evt)
-    },
+    onChange,
     onSelect,
     onBlur,
     onClick,

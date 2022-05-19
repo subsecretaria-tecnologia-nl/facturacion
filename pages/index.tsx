@@ -20,13 +20,12 @@ export default function Home() {
                 <div className="d-flex">
                     <Card width="700px" className="">
                         <Title>Obtener Comprobante Fiscal</Title>
-                        <Label>
+                        <Label className="row mx-1">
                             Para generar su CFDI es necesario que tenga sus
                             datos fiscales a la mano y responda las siguientes
                             preguntas:
                         </Label>
                         <Label>
-                            {" "}
                             Captura el folio único que se muestra en la parte
                             inferior del recibo de pago.
                         </Label>

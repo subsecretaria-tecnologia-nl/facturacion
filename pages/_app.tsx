@@ -1,5 +1,5 @@
 import "../styles/styles.scss"
-import "bootstrap/dist/css/bootstrap.min.css"
+// import "bootstrap/dist/css/bootstrap.min.css"
 import Header from "organisms/Header/Navbar"
 import Head from "next/head"
 import Image from "next/image"

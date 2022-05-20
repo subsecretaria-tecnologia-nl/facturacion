@@ -3,12 +3,21 @@ import Label from "atoms/Label"
 import Input from "atoms/Input"
 import { useState } from "react"
 import Title from "atoms/Typography"
+import Select from "atoms/Select"
+import { type } from "os"
 
 export default function Home() {
     const [inputTest, setInputTest] = useState("")
     const handleInputChange = (e) => {
         setInputTest(e.target.value)
     }
+
+    const arrayTest = [
+        { text: "x", id: 0 },
+        { text: "y", id: 1 },
+        { text: "t", id: 2 },
+    ]
+
     return (
         <div className={""}>
             <main className={"main"}>
@@ -25,6 +34,8 @@ export default function Home() {
                             datos fiscales a la mano y responda las siguientes
                             preguntas:
                         </Label>
+
+                        <Select options={arrayTest}></Select>
 
                         <Label className="mt-2">
                             Captura el folio único que se muestra en la parte

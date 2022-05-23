@@ -36,6 +36,12 @@ jobs:
                   password: ${{ secrets.PROD_PASSWORD }}
                   script: |
                       cd ${{ secrets.PROD_FOLDER }} &&
+
+                      if [ -d facturacion-build ];
+                      then
+                        rm -Rf facturacion-build;
+                      fi &&
+
                       git clone -b ${{ secrets.PROD_BRANCH }} --single-branch ${{ secrets.URL_REPO }} 'facturacion-build' &&
                       cd ./facturacion-build &&
                       yarn install &&

@@ -47,7 +47,17 @@ jobs:
                       yarn install &&
                       yarn build &&
                       cd .. &&
+
+                      if [ -d facturacion-old ];
+                      then
+                        rm -Rf facturacion-old;
+                      fi &&
                       mv './facturacion' './facturacion-old' &&
+
+                      if [ -d facturacion ];
+                      then
+                        rm -Rf facturacion;
+                      fi &&
                       mv './facturacion-build' './facturacion' &&
                       echo "Build successfully on \"http://${{ secrets.PROD_ENDPOINT }}/\""
             - name: kill vpn

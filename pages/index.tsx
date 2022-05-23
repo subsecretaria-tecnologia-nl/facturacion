@@ -14,9 +14,7 @@ export default function Home() {
             </Head>
 
             <main className={"main"}>
-                <h1 className="title">
-                    Welcome to <a href="https://nextjs.org">Next.js!</a>
-                </h1>
+                <h1 className="title">Probando GitHub Actions</h1>
 
                 <p className={"description"}>
                     He cambiado algo de código en{" "}

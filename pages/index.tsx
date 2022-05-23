@@ -14,7 +14,12 @@ export default function Home() {
             </Head>
 
             <main className={"main"}>
-                <h1 className="title">Probando GitHub Actions</h1>
+                <h1 className="title">
+                    Probando{" "}
+                    <a href="https://github.com/subsecretaria-tecnologia-nl/facturacion/actions">
+                        GitHub Actions!
+                    </a>
+                </h1>
 
                 <p className={"description"}>
                     He cambiado algo de código en{" "}

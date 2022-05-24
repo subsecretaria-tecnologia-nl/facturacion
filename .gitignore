@@ -33,3 +33,5 @@ yarn-error.log*
 
 #lint
 .eslintcache
+
+.github/_actions_secrets.txt

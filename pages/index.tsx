@@ -22,7 +22,7 @@ export default function Home() {
         <div className={""}>
             <main className={"main"}>
                 <p className={"description"}>
-                    Get started by editing{" "}
+                    He cambiado algo de código en{" "}
                     <code className={"code"}>pages/index.js</code>
                 </p>
 

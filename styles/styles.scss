@@ -6,10 +6,12 @@
 
 // ATOMS STYLES
 @import "styles/atoms/typography";
+@import "styles/atoms/input";
+@import "styles/atoms/select";
 
 // MOLECULES STYLES
 
 // ORGANISMS STYLES
-
+@import "styles/organism/header";
 // PAGES STYLES
 @import "styles/pages/home";

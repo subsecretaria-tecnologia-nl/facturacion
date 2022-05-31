@@ -1,1 +1,9 @@
 // _fonts.scss
+@font-face {
+    font-family: "PoppinsRegular";
+    src: url(/fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+body * {
+    font-family: "PoppinsRegular";
+}

@@ -16,7 +16,7 @@ export default function Home() {
 
             <main className={"main"}>
                 <Title type="h1" className="title">
-                    algo
+                    test rama
                 </Title>
                 <Body otro={45} algo={"086086"}>
                     ESTE ES EL HIJO

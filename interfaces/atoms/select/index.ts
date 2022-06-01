@@ -1,5 +1,5 @@
 
-import { ReactElement, HTMLAttributes } from "react"
+import { ReactElement, HTMLAttributes, useState, ChangeEventHandler } from "react"
 
 interface options {
 	text: string
@@ -11,7 +11,10 @@ export interface ISelectProps extends HTMLAttributes<HTMLHeadingElement> {
 	color?: string
 	className?: string
     options: options[]
+	value?: number | string
+	onChange?: ChangeEventHandler<any> | undefined | null
 }
+
 
 
 

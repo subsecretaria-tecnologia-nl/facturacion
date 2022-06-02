@@ -4,6 +4,7 @@ import { ReactElement, HTMLAttributes, useState, ChangeEventHandler } from "reac
 interface options {
 	text: string
 	id: number
+	disabled? : boolean  | false
 }
 
 export interface ISelectProps extends HTMLAttributes<HTMLHeadingElement> {
@@ -13,6 +14,7 @@ export interface ISelectProps extends HTMLAttributes<HTMLHeadingElement> {
     options: options[]
 	value?: number | string
 	onChange?: ChangeEventHandler<any> | undefined | null
+	
 }
 
 

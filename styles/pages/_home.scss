@@ -92,7 +92,7 @@
 .card:focus,
 .card:active {
     color: inherit;
-    border-color: $primaryBackground;
+    border-color: $primaryBackground !important;
 }
 
 .card h2 {

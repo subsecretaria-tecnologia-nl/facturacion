@@ -11,7 +11,7 @@ const Select: FunctionComponent<ISelectProps> = ({
 }) => {
     return (
         <>
-            <div className="select-wrapper">
+            <div className={["select-wrapper", className].join(" ")}>
                 <select
                     name=""
                     id=""
@@ -24,6 +24,7 @@ const Select: FunctionComponent<ISelectProps> = ({
                             className="select-options"
                             key={item.id}
                             value={item.id}
+                            disabled={item.disabled}
                         >
                             {item.text}
                         </option>

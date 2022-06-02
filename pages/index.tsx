@@ -22,17 +22,21 @@ export default function Home() {
         { text: "Pago directo en OXXO", id: 5 },
     ]
 
+    const halndeSelectLoad = () => {
+        console.log("es 0?")
+    }
+
     const showInput = () => {
         switch (valueSelect) {
             case "0":
                 return (
                     <>
-                        <Label className="mt-2">
+                        <Label>
                             Captura los datos que se encuentran en tu recibo de
                             pago.
                         </Label>
 
-                        <div>
+                        <div className="mt-4">
                             <label htmlFor="">Número de caja (4 dígitos)</label>
                             <Input
                                 name="test1"
@@ -42,7 +46,7 @@ export default function Home() {
                                 className="input-text my-2"
                             ></Input>
                         </div>
-                        <div>
+                        <div className="mt-4">
                             <label htmlFor="">Folio de Pago</label>
                             <Input
                                 name="test2"
@@ -52,7 +56,7 @@ export default function Home() {
                                 className="input-text my-2"
                             ></Input>
                         </div>
-                        <div>
+                        <div className="mt-4">
                             <label htmlFor="">Numero transaccion</label>
                             <Input
                                 name="test3"
@@ -172,7 +176,7 @@ export default function Home() {
                 </p>
 
                 <div className="d-flex">
-                    <Card width="700px" className="">
+                    <Card width="700px" height="auto" className="">
                         <Title>Obtener Comprobante Fiscal</Title>
                         <Label className="mx-1 mb-4">
                             Para generar su CFDI es necesario que tenga sus
@@ -184,6 +188,8 @@ export default function Home() {
                             options={arrayTest}
                             value={valueSelect}
                             onChange={handdleSelectChange}
+                            onLoad={() => console.log("termino de cargar")}
+                            className="pb-4"
                         ></Select>
 
                         {showInput()}

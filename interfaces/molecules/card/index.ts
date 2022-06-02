@@ -5,4 +5,8 @@ export interface ICardProps  extends HTMLAttributes<HTMLHeadingElement>{
     width?: string
     height?: string
     className?: string 
+    minHeight? :string 
+    maxHeight? :string
+    minWidth? :string
+    maxWidth? :string
 }

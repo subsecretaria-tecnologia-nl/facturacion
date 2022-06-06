@@ -1,14 +1,23 @@
 import Card from "molecules/Card"
 import Label from "atoms/Label"
 import Input from "atoms/Input"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Title from "atoms/Typography"
 import Select from "atoms/Select"
-import { type } from "os"
+import Button from "atoms/Buttons"
 
 export default function Home() {
-    const [inputTest, setInputTest] = useState("")
-    const handleInputChange = (e) => setInputTest(e.target.value)
+    const [inputTest, setInputTest] = useState({
+        caja: "",
+        folio_pago: "",
+        num_trans: "",
+    })
+    const handleCajaChange = (e) =>
+        setInputTest({ ...inputTest, caja: e.target.value })
+    const handleFolioChange = (e) =>
+        setInputTest({ ...inputTest, folio_pago: e.target.value })
+    const handleNumChange = (e) =>
+        setInputTest({ ...inputTest, num_trans: e.target.value })
 
     const [valueSelect, setValueSelect] = useState("")
     const handdleSelectChange = (e) => setValueSelect(e.target.value)
@@ -21,10 +30,6 @@ export default function Home() {
         { text: "Pago con referencia bancaria", id: 4 },
         { text: "Pago directo en OXXO", id: 5 },
     ]
-
-    const halndeSelectLoad = () => {
-        console.log("es 0?")
-    }
 
     const showInput = () => {
         switch (valueSelect) {
@@ -41,8 +46,8 @@ export default function Home() {
                             <Input
                                 name="test1"
                                 placeholder="dexter"
-                                value={inputTest}
-                                onChange={handleInputChange}
+                                value={inputTest.caja}
+                                onChange={handleCajaChange}
                                 className="input-text my-2"
                             ></Input>
                         </div>
@@ -51,8 +56,8 @@ export default function Home() {
                             <Input
                                 name="test2"
                                 placeholder="dexter"
-                                value={inputTest}
-                                onChange={handleInputChange}
+                                value={inputTest.folio_pago}
+                                onChange={handleFolioChange}
                                 className="input-text my-2"
                             ></Input>
                         </div>
@@ -61,8 +66,8 @@ export default function Home() {
                             <Input
                                 name="test3"
                                 placeholder="dexter"
-                                value={inputTest}
-                                onChange={handleInputChange}
+                                value={inputTest.num_trans}
+                                onChange={handleNumChange}
                                 className="input-text my-2"
                             ></Input>
                         </div>
@@ -167,15 +172,17 @@ export default function Home() {
         }
     }
 
+    useEffect(
+        () => {
+            setValueSelect("0")
+        },
+        [] // si pasas el arreglo vació se ejecuta una sola vez cuando termina de montarse el component [var1, var2] // Si pasas una o más variables se va a ejecutar cuando estas muten.
+    )
+
     return (
         <div className={""}>
-            <main className={"main"}>
-                <p className={"description"}>
-                    He cambiado algo de código en{" "}
-                    <code className={"code"}>pages/index.js</code>
-                </p>
-
-                <div className="d-flex">
+            <main className={"main justify-center"}>
+                <div className="d-flex justify-center">
                     <Card width="700px" height="auto" className="">
                         <Title>Obtener Comprobante Fiscal</Title>
                         <Label className="mx-1 mb-4">
@@ -188,11 +195,17 @@ export default function Home() {
                             options={arrayTest}
                             value={valueSelect}
                             onChange={handdleSelectChange}
-                            onLoad={() => console.log("termino de cargar")}
                             className="pb-4"
                         ></Select>
 
                         {showInput()}
+
+                        <div className="d-flex justify-end mt-4">
+                            <Button className="btn-enviar">
+                                {" "}
+                                <span> Enviar </span>{" "}
+                            </Button>
+                        </div>
                     </Card>
                 </div>
             </main>

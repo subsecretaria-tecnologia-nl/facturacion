@@ -4,7 +4,7 @@ import { ICardProps } from "interfaces/molecules/card"
 const Card: FunctionComponent<ICardProps> = ({
     children,
     width = "500px",
-    height = "500px",
+    height = "",
     className = "",
     minHeight,
     maxHeight,

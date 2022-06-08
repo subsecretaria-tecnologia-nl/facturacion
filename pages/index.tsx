@@ -5,19 +5,29 @@ import { useState, useEffect } from "react"
 import Title from "atoms/Typography"
 import Select from "atoms/Select"
 import Button from "atoms/Buttons"
+import Link from "next/link"
 
 export default function Home() {
     const [inputTest, setInputTest] = useState({
         caja: "",
         folio_pago: "",
         num_trans: "",
+        folio_unico: "",
+        placa: "",
+        referencia: "",
     })
-    const handleCajaChange = (e) =>
+    const handleCajaChange = (e: object) =>
         setInputTest({ ...inputTest, caja: e.target.value })
     const handleFolioChange = (e) =>
         setInputTest({ ...inputTest, folio_pago: e.target.value })
     const handleNumChange = (e) =>
         setInputTest({ ...inputTest, num_trans: e.target.value })
+    const handleFolioUnico = (e) =>
+        setInputTest({ ...inputTest, folio_unico: e.target.value })
+    const handleInputPlaca = (e) =>
+        setInputTest({ ...inputTest, placa: e.target.value })
+    const handleInputReferencia = (e) =>
+        setInputTest({ ...inputTest, referencia: e.target.value })
 
     const [valueSelect, setValueSelect] = useState("")
     const handdleSelectChange = (e) => setValueSelect(e.target.value)
@@ -85,8 +95,8 @@ export default function Home() {
                         <Input
                             name="test"
                             placeholder="dexter"
-                            value={inputTest}
-                            onChange={handleInputChange}
+                            value={inputTest.folio_unico}
+                            onChange={handleFolioUnico}
                             className="input-text my-2"
                         ></Input>
                     </>
@@ -104,8 +114,8 @@ export default function Home() {
                         <Input
                             name="test"
                             placeholder="dexter"
-                            value={inputTest}
-                            onChange={handleInputChange}
+                            value={inputTest.placa}
+                            onChange={handleInputPlaca}
                             className="input-text my-2"
                         ></Input>
                     </>
@@ -122,8 +132,8 @@ export default function Home() {
                         <Input
                             name="test"
                             placeholder="dexter"
-                            value={inputTest}
-                            onChange={handleInputChange}
+                            value={inputTest.folio_unico}
+                            onChange={handleFolioUnico}
                             className="input-text my-2"
                         ></Input>
                     </>
@@ -140,8 +150,8 @@ export default function Home() {
                         <Input
                             name="test"
                             placeholder="dexter"
-                            value={inputTest}
-                            onChange={handleInputChange}
+                            value={inputTest.referencia}
+                            onChange={handleInputReferencia}
                             className="input-text my-2"
                         ></Input>
                     </>
@@ -159,8 +169,8 @@ export default function Home() {
                         <Input
                             name="test"
                             placeholder="dexter"
-                            value={inputTest}
-                            onChange={handleInputChange}
+                            value={inputTest.placa}
+                            onChange={handleInputPlaca}
                             className="input-text my-2"
                         ></Input>
                     </>
@@ -183,7 +193,12 @@ export default function Home() {
         <div className={""}>
             <main className={"main justify-center"}>
                 <div className="d-flex justify-center">
-                    <Card width="700px" height="auto" className="">
+                    <Card
+                        width="700px"
+                        maxHeight="700px"
+                        height="auto"
+                        className=""
+                    >
                         <Title>Obtener Comprobante Fiscal</Title>
                         <Label className="mx-1 mb-4">
                             Para generar su CFDI es necesario que tenga sus
@@ -201,10 +216,9 @@ export default function Home() {
                         {showInput()}
 
                         <div className="d-flex justify-end mt-4">
-                            <Button className="btn-enviar">
-                                {" "}
-                                <span> Enviar </span>{" "}
-                            </Button>
+                            <Link href="/results">
+                                <a className="btn-enviar"> Enviar </a>
+                            </Link>
                         </div>
                     </Card>
                 </div>

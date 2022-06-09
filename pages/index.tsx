@@ -16,7 +16,7 @@ export default function Home() {
         placa: "",
         referencia: "",
     })
-    const handleCajaChange = (e: object) =>
+    const handleCajaChange = (e) =>
         setInputTest({ ...inputTest, caja: e.target.value })
     const handleFolioChange = (e) =>
         setInputTest({ ...inputTest, folio_pago: e.target.value })

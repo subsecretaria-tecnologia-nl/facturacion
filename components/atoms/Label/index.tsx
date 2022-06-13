@@ -5,9 +5,16 @@ const Label: FunctionComponent<ILabelProps> = ({
     children,
     color,
     className,
+    width,
+    maxWidth,
+    minWidth,
 }) => {
     return (
-        <label htmlFor="" style={{ color }} className={className}>
+        <label
+            htmlFor=""
+            style={{ color, width, maxWidth, minWidth }}
+            className={className}
+        >
             {children}
         </label>
     )

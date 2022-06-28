@@ -3,7 +3,7 @@ import { ReactElement, HTMLAttributes, useState, ChangeEventHandler } from "reac
 
 interface options {
 	text: string
-	id: number
+	id: string | number
 	disabled? : boolean  | false
 }
 

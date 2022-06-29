@@ -93,11 +93,13 @@ const PaymentMethods = ({ onChange }) => {
                     )
                 )}
 
-            <div className="d-flex justify-end mt-4">
-                <Button onClick={handleSubmit}>
-                    <a className="btn-enviar"> Enviar </a>
-                </Button>
-            </div>
+            {!!paymentOptionsSelected && (
+                <div className="d-flex justify-end mt-4">
+                    <Button onClick={handleSubmit}>
+                        <a className="btn-enviar"> Enviar </a>
+                    </Button>
+                </div>
+            )}
         </>
     )
 }
